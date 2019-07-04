@@ -1,0 +1,12 @@
+body {
+    font-family: Nunito, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+#main-container {
+    margin: 2em;
+}
