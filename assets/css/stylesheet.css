@@ -1,12 +1,47 @@
+@font-face {
+    font-family: CircularStd-Black;
+    src: url(../fonts/CircularStd-Black.ttf);
+}
+
+@font-face {
+    font-family: CircularStd-Book;
+    src: url(../fonts/CircularStd-Book.otf);
+}
+
+@font-face {
+    font-family: CircularStd-Medium;
+    src: url(../fonts/CircularStd-Medium.otf);
+}
+
+@font-face {
+    font-family: FreightText-Book;
+    src: url(../fonts/FreightText-Book.otf);
+}
+
 body {
-    font-family: Nunito, sans-serif;
-    font-weight: 400;
+    font-family: CircularStd-Black, sans-serif;
 }
 
 h1 {
-    font-size: 36px;
+    font-family: CircularStd-Medium, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 32px;
 }
 
 #main-container {
     margin: 2em;
+}
+
+.fieldLabel, .form-control {
+    font-family: FreightText-Book, sans-serif;
+    font-size: 16px;
+}
+
+.fieldLabel {
+    margin-bottom: 0;
+}
+
+.form-control {
+    opacity: 0.4;
 }
