@@ -45,3 +45,8 @@ h1 {
 .form-control {
     opacity: 0.4;
 }
+
+#goToServicesButton {
+    font-family: CircularStd-Medium, sans-serif;
+    background-color: #2d2926;
+}
