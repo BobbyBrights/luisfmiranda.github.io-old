@@ -25,8 +25,10 @@ function handleLoginInput() {
 }
 
 function loginUser() {
+    const email = document.getElementById("email").value;
+
     try {
-        window.webkit.messageHandlers.iOSSendToken.postMessage('?');
+        window.webkit.messageHandlers.iOSSendToken.postMessage('(name for ' + email + ')');
     } catch (err) {
         console.log('Unable to reach the mobile layer:', err);
     }
