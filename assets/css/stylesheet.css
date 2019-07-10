@@ -18,10 +18,6 @@
     src: url(../fonts/FreightText-Book.otf);
 }
 
-body {
-    font-family: CircularStd-Black, sans-serif;
-}
-
 h1 {
     font-family: CircularStd-Medium, sans-serif;
     font-size: 24px;
@@ -49,4 +45,37 @@ h1 {
 #goToServicesButton, #updateExchangeRates {
     font-family: CircularStd-Medium, sans-serif;
     background-color: #2d2926;
+}
+
+.currencyNames {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 17px;
+}
+
+.exchangeRates {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 17px;
+}
+
+#selectedCurrency {
+  color: Black;
+  background-color: White;
+  border-color: Black;
+}
+
+.dropdown-item {
+  text-align: center
+}
+
+#currenciesList {
+  text-align: center;
+}
+
+.currencyListing {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.exchangeRates, .currencyNames {
+  vertical-align: bottom;
 }
