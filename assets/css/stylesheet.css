@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
     font-family: CircularStd-Black;
     src: url(../fonts/CircularStd-Black.ttf);
 }
@@ -46,7 +46,7 @@ h1 {
     opacity: 0.4;
 }
 
-#goToServicesButton {
+#goToServicesButton, #updateExchangeRates {
     font-family: CircularStd-Medium, sans-serif;
     background-color: #2d2926;
 }
