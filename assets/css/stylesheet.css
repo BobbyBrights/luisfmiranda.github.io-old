@@ -18,30 +18,42 @@
     src: url(../fonts/FreightText-Book.otf);
 }
 
-h1 {
-    font-family: CircularStd-Medium, sans-serif;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 32px;
+@font-face {
+  font-family: SanFranciscoDisplay-Regular;
+  src: url(../fonts/SanFrancisco/SF-Pro-Display-Regular.otf);
 }
+
+@font-face {
+  font-family: SanFranciscoText-Regular;
+  src: url(../fonts/SanFrancisco/SF-Pro-Text-Regular.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoText-RegularItalic;
+  src: url(../fonts/SanFrancisco/SF-Pro-Text-RegularItalic.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoText-Semibold;
+  src: url(../fonts/SanFrancisco/SF-Pro-Text-Medium.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoText-Bold;
+  src: url(../fonts/SanFrancisco/SF-Pro-Text-Bold.otf);
+}
+
+@font-face {
+  font-family: SanFranciscoRounded-Regular;
+  src: url(../fonts/SanFrancisco/SF-Pro-Rounded-Regular.otf);
+}
+
+/* Legacy code */
 
 #main-container {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 0.5em;
-}
-
-.fieldLabel, .form-control {
-    font-family: FreightText-Book, sans-serif;
-    font-size: 16px;
-}
-
-.fieldLabel {
-    margin-bottom: 0;
-}
-
-.form-control {
-    opacity: 0.4;
 }
 
 .currencyNames {
@@ -190,4 +202,55 @@ h1 {
 
 #view-basket-button {
   text-decoration: none;
+}
+
+/* New code */
+
+h1 {
+  font-family: "SanFranciscoText-Semibold", sans-serif;
+  font-size: 1.9em;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-signin {
+  width:345px;
+  margin:0 auto;
+}
+
+.form-group {
+  font-family: "SanFranciscoText-Regular", sans-serif;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.form-control {
+  font-family: "SanFranciscoText-Regular", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border-radius:8px;
+  opacity: 0.4;
+  border-color: #0c14337d;
+  height:48px;
+}
+
+.register-form-wrapper button {
+  border-radius:24px;
+  width:100%;
+  padding:12px;
+  margin:20px 0;
+}
+
+#t-and-c-warning {
+  font-family: "SanFranciscoText-Regular", sans-serif;
+  font-size: 11px;
+  color: #0c14337d;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#terms-of-use-link {
+  font-family: "SanFranciscoText-Semibold", sans-serif;
+  font-size: 11px;
+  color: black;
 }

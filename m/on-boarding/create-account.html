@@ -8,23 +8,29 @@
   <link rel="stylesheet" href="../../assets/css/stylesheet.css">
 </head>
 <body>
-  <div id="main-container">
-    <h1>Create Qu Money Account</h1>
+  <div id="register-form-wrapper">
+    <h1>Create account</h1>
 
-    <form>
-      <div class="form-group">
-        <label for="name" class="fieldLabel">First and Last Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter your first and last name" oninput="handleInput()">
-      </div>
-      <div class="form-group">
-        <label for="email" class="fieldLabel">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter your email" oninput="handleInput()">
-      </div>
-      <div class="form-group">
-        <label for="password" class="fieldLabel">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter your password" oninput="handleInput()">
-      </div>
+    <form class="form-signin">
+        <div class="form-group">
+          <label for="name">First and last name</label>
+          <input type="name" formControlName="name" id="name" class="form-control" placeholder="First and last name" oninput="handleInput()"/>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" id="email" class="form-control" placeholder="Email" oninput="handleInput()"/>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" id="password" class="form-control" placeholder="Password" oninput="handleInput()"/>
+        </div>
     </form>
+
+    <p id="t-and-c-warning">
+      By continuing you accept our <a><span id="terms-of-use-link">Terms of Use</span></a>.
+    </p>
   </div>
 
   <!-- Bootstrap-related libraries -->

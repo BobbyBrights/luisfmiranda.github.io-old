@@ -6,13 +6,17 @@ let email="";
 let password = "";
 
 function handleInput() {
-    const nameCharsCount = document.getElementById("name").value.length;
-    const emailCharsCount = document.getElementById("email").value.length;
-    const passwordCharsCount = document.getElementById("password").value.length;
+    const nameCharsCount = $('#name')[0].value.length;
+    const emailCharsCount = $('#email')[0].value.length;
+    const passwordCharsCount = $('#password')[0].value.length;
 
-    document.getElementById('name').style.opacity = (nameCharsCount !== 0 ? '1' : '0.2');
-    document.getElementById('email').style.opacity = (emailCharsCount !== 0 ? '1' : '0.2');
-    document.getElementById('password').style.opacity = (passwordCharsCount !== 0 ? '1' : '0.2');
+    $('#name').css('opacity', nameCharsCount === 0 ? 0.4 : 1);
+    $('#email').css('opacity', emailCharsCount === 0 ? 0.4 : 1);
+    $('#password').css('opacity', passwordCharsCount === 0 ? 0.4 : 1);
+
+    $('#name').css('font-size', nameCharsCount === 0 ? '14px' : '16px');
+    $('#email').css('font-size', emailCharsCount === 0 ? '14px' : '16px');
+    $('#password').css('font-size', passwordCharsCount === 0 ? '14px' : '16px');
 
     try {
         if (nameCharsCount !== 0 && passwordCharsCount !== 0 && emailCharsCount !== 0) {
@@ -32,9 +36,9 @@ function handleInput() {
 }
 
 function retrieveUserInfo() {
-    name = document.getElementById("name").value;
-    email = document.getElementById("email").value;
-    password = document.getElementById("password").value;
+    name = $('#name');
+    email = $('#email');
+    password = $('#password');
 
     users[email] = {'name': name, 'password': password};
 

@@ -2,7 +2,7 @@ const ONE_SECOND_IN_MILLISECONDS = 1000;
 
 let baseCcy = 'gbp';
 
-﻿let exchangeRates = {
+let exchangeRates = {
     'eur-cad': 1.47324,
     'eur-chf': 1.11331,
     'eur-gbp': 0.89971,
@@ -28,7 +28,7 @@ let baseCcy = 'gbp';
 };
 
 updateExchangeRates();
-window.setInterval(updateExchangeRates, ONE_SECOND_IN_MILLISECONDS);
+setInterval(updateExchangeRates, ONE_SECOND_IN_MILLISECONDS);
 
 function updateExchangeRates() {
     fetchPrices();
