@@ -187,3 +187,7 @@ h1 {
 .ccy-accs-masks {
   display: flex;
 }
+
+#view-basket-button {
+  text-decoration: none;
+}
