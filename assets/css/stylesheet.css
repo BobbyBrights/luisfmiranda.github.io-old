@@ -26,7 +26,9 @@ h1 {
 }
 
 #main-container {
-    margin: 2em;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.5em;
 }
 
 .fieldLabel, .form-control {
@@ -42,18 +44,13 @@ h1 {
     opacity: 0.4;
 }
 
-#goToServicesButton, #updateExchangeRates {
-    font-family: CircularStd-Medium, sans-serif;
-    background-color: #2d2926;
-}
-
 .currencyNames {
-  font-family: 'Overpass Mono', monospace;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 17px;
 }
 
 .exchangeRates {
-  font-family: 'Overpass Mono', monospace;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 17px;
 }
 
@@ -67,15 +64,126 @@ h1 {
   text-align: center
 }
 
-#currenciesList {
+#currenciesList, #ccyAccsList {
   text-align: center;
 }
 
 .currencyListing {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
+.favCcys, .ccyAccs {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .exchangeRates, .currencyNames {
   vertical-align: bottom;
+}
+
+.RoundedButton {
+  height: 40px;
+  border-radius: 24.5px;
+  border: solid 1px #000000;
+  background-color: #000000;
+  margin-top: 0.8rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.RoundedButtonText {
+  margin-top: 8px;
+  font-family: CircularStd-Black;
+  font-size: 16px;
+  letter-spacing: 1.78px;
+  color: #ffffff;
+}
+
+.cardTitle {
+  font-family: CircularStd-Medium;
+  font-size: 16px;
+  text-align: center;
+}
+
+#profileIcon {
+  margin-bottom: 5px;
+}
+
+.header-item {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+
+#dashboard-header {
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+#ccyAccsCards {
+  width: 90%;
+  text-align: center;
+}
+
+.mask {
+  width: 30%;
+  height: 28px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+#favoriteCcys {
+  width: 100%;
+  height: 10em;
+}
+
+.mask .upper-line, .mask .bottom-line {
+  text-align: center;
+  font-family: 'CircularStd-Book', monospace;
+  font-size: 17px;
+}
+
+.ccyNameOnCcyAccCard {
+  vertical-align: bottom;
+}
+
+.session-title {
+  font-family: 'CircularStd-Medium', sans-serif;
+  font-size: 20px;
+  margin-top: 17px;
+  margin-bottom: 6px;
+}
+
+.white-button {
+  width: 80%;
+  margin: auto;
+  height: 40px;
+  border-radius: 24.5px;
+  border: solid 1px #000000;
+}
+
+.white-button-text {
+  text-align: center;
+  margin-top: 8px;
+  font-family: CircularStd-Black;
+  font-size: 16px;
+  letter-spacing: 1.78px;
+  color: #000000;
+}
+
+#processing-card {
+  width: 100%;
+  height: 56px;
+}
+
+#processing-card-line {
+  padding-left: 5%;
+  text-align: left;
+}
+
+.ccy-accs-masks {
+  display: flex;
 }

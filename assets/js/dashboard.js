@@ -38,7 +38,7 @@ function fetchPrices() {
     $('.currencyListing').hide();
 
     Object.keys(exchangeRates).forEach((key) => {
-      const priceChange = 1 + ((0.00003 * Math.random()) * (Math.random() < 0.5 ? -1 : 1));
+      const priceChange = 1 + ((0.00005 * Math.random()) * (Math.random() < 0.5 ? -1 : 1));
       exchangeRates[key] *= priceChange;
 
       if (key === 'gbp-jpy' || key === 'usd-jpy') {

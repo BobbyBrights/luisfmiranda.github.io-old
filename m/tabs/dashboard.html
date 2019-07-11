@@ -4,142 +4,116 @@
   <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>Dashboard</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Overpass+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="../../assets/css/stylesheet.css">
 </head>
 <body>
 <div id="main-container">
-  <h1>Dashboard</h1>
+  <!-- <h1>Dashboard</h1> -->
+  <div id="dashboard-header">
+    <img id="profileIcon" src="../../assets/img/icons/profile.png" height="17px" width="17px">
+    <span class="header-item">Luis&nbsp;&nbsp;</span>
+    <img src="../../assets/img/icons/basket.png" height="24px" width="34px">
+  </div>
 
-  <div class="card">
-  <div class="card-body">
-    <h6 class="card-title">Base currency&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="session-title">
+      Currency Accounts (2)
+  </div>
 
-      <span class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="selectedCurrency" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">&nbsp;&nbsp; <span id="baseCcyAbbr">GBP</span>
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#" onclick="selectEur()"><img src="../../assets/img/flags/EUR.png" height="24px" width="24px">&nbsp;&nbsp; EUR</a>
-          <a class="dropdown-item" href="#" onclick="selectGbp()"><img src="../../assets/img/flags/GBP.png" height="24px" width="24px">&nbsp;&nbsp; GBP</a>
-          <a class="dropdown-item" href="#" onclick="selectUsd()"><img src="../../assets/img/flags/USD.png" height="24px" width="24px">&nbsp;&nbsp; USD</a>
-        </div>
-      </span>
-
-    </h6>
-
-    <div id="currenciesList">
-      <!-- Base currency: EUR -->
-
-      <div class="currencyListing eurListing">
-        <img src="../../assets/img/flags/CAD.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; CAD </span><span class="exchangeRates" id="eur-cad">-.----</span>
-      </div>
-
-      <div class="currencyListing eurListing">
-        <img src="../../assets/img/flags/CHF.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; CHF </span><span class="exchangeRates" id="eur-chf">-.----</span>
-      </div>
-
-      <div class="currencyListing eurListing">
-        <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; GBP </span><span class="exchangeRates" id="eur-gbp">-.----</span>
-      </div>
-
-      <div class="currencyListing eurListing">
-        <img src="../../assets/img/flags/NOK.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; NOK </span><span class="exchangeRates" id="eur-nok">-.----</span>
-      </div>
-
-      <div class="currencyListing eurListing">
-        <img src="../../assets/img/flags/USD.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; USD </span><span class="exchangeRates" id="eur-usd">-.----</span>
-      </div>
-
-      <!-- Base currency: GBP -->
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/CAD.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; CAD </span><span class="exchangeRates" id="gbp-cad">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/CHF.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; CHF </span><span class="exchangeRates" id="gbp-chf">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
+  <div class="ccy-accs-masks">
+    <div class="mask">
+      <div class="upper-line">
         <img src="../../assets/img/flags/EUR.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; EUR </span><span class="exchangeRates" id="gbp-eur">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/JPY.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; JPY </span><span class="exchangeRates" id="gbp-jpy">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/NOK.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; NOK </span><span class="exchangeRates" id="gbp-nok">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/NZD.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; NZD </span><span class="exchangeRates" id="gbp-nzd">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/USD.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; USD </span><span class="exchangeRates" id="gbp-usd">-.----</span>
-      </div>
-
-      <div class="currencyListing gbpListing">
-        <img src="../../assets/img/flags/ZAR.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; ZAR </span><span class="exchangeRates" id="gbp-zar">-.----</span>
-      </div>
-
-      <!-- Base currency: USD -->
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/CAD.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; CAD </span><span class="exchangeRates" id="usd-cad">-.----</span>
-      </div>
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/CHF.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; CHF </span><span class="exchangeRates" id="usd-chf">-.----</span>
-      </div>
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/EUR.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; EUR </span><span class="exchangeRates" id="usd-eur">-.----</span>
-      </div>
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; GBP </span><span class="exchangeRates" id="usd-gbp">-.----</span>
-      </div>
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/JPY.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; JPY </span><span class="exchangeRates" id="usd-jpy">-.----</span>
-      </div>
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/NOK.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; NOK </span><span class="exchangeRates" id="usd-nok">-.----</span>
-      </div>
-
-      <div class="currencyListing usdListing">
-        <img src="../../assets/img/flags/ZAR.png" height="24px" width="24px">
-        <span class="currencyNames">&nbsp; ZAR </span><span class="exchangeRates" id="usd-zar">-.----</span>
+        <span class="ccyNameOnCcyAccCard">&nbsp;€0.00</span>
       </div>
     </div>
 
-    <a class="card-link" onclick="goToServicesButtonClicked()">Show all rates</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div class="mask">
+      <div class="upper-line">
+        <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">
+        <span class="ccyNameOnCcyAccCard">&nbsp;£0.00</span>
+      </div>
+    </div>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <div class="mask">
+      <div class="upper-line">
+        <img src="../../assets/img/flags/USD.png" height="24px" width="24px">
+        <span class="ccyNameOnCcyAccCard">&nbsp;$0.00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="session-title">
+      You have 3 items in your basket
+  </div>
+
+  <div class="white-button">
+    <div class="white-button-text">
+      VIEW BASKET
+    </div>
+  </div>
+
+  <div class="session-title">
+      Processing (1)
+  </div>
+
+  <div class="mask" id="processing-card">
+    <div class="upper-line" id="processing-card-line">
+      <span class="ccyNameOnCcyAccCard">Deposit/Convert</span>
+    </div>
+    <div class="upper-line" id="processing-card-line">
+      <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">
+      <span class="ccyNameOnCcyAccCard">&nbsp;£100.00</span>
+    </div>
+  </div>
+
+  <div class="session-title">
+      Completed (0)
+  </div>
+
+  <div class="session-title">
+      Favorites
+  </div>
+
+  <div class="mask" id="favoriteCcys">
+    <div id="currenciesList">
+      <div class="favCcys">
+        <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">
+        <span class="currencyNames">&nbsp;GBP&nbsp;</span>
+        <span class="exchangeRates" id="gbp-usd">-.----</span>
+        <span class="currencyNames">&nbsp;USD&nbsp;</span>
+        <img src="../../assets/img/flags/USD.png" height="24px" width="24px">
+      </div>
+
+      <div class="favCcys">
+        <img src="../../assets/img/flags/EUR.png" height="24px" width="24px">
+        <span class="currencyNames">&nbsp;EUR&nbsp;</span>
+        <span class="exchangeRates" id="eur-gbp">-.----</span>
+        <span class="currencyNames">&nbsp;GBP&nbsp;</span>
+        <img src="../../assets/img/flags/GBP.png" height="24px" width="24px">
+      </div>
+
+      <div class="favCcys">
+        <img src="../../assets/img/flags/USD.png" height="24px" width="24px">
+        <span class="currencyNames">&nbsp;USD&nbsp;</span>
+        <span class="exchangeRates" id="usd-eur">-.----</span>
+        <span class="currencyNames">&nbsp;EUR&nbsp;</span>
+        <img src="../../assets/img/flags/EUR.png" height="24px" width="24px">
+      </div>
+
+      <a onclick="goToServicesButtonClicked()">
+      <div class="RoundedButton">
+        <div class="RoundedButtonText">SEE ALL RATES</div>
+      </div>
+      </a>
+    </div>
   </div>
 </div>
 
