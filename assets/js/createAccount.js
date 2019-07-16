@@ -10,14 +10,12 @@ function handleInput() {
     const emailCharsCount = $('#email')[0].value.length;
     const passwordCharsCount = $('#password')[0].value.length;
 
-    $('#name').css('opacity', nameCharsCount === 0 ? 0.4 : 1);
-    $('#email').css('opacity', emailCharsCount === 0 ? 0.4 : 1);
-    $('#password').css('opacity', passwordCharsCount === 0 ? 0.4 : 1);
-
+    
     $('#name').css('font-size', nameCharsCount === 0 ? '14px' : '16px');
     $('#email').css('font-size', emailCharsCount === 0 ? '14px' : '16px');
     $('#password').css('font-size', passwordCharsCount === 0 ? '14px' : '16px');
 
+    
     try {
         if (nameCharsCount !== 0 && passwordCharsCount !== 0 && emailCharsCount !== 0) {
             if (!continueButtonIsActive) {
