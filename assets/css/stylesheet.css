@@ -44,6 +44,11 @@
 }
 
 @font-face {
+  font-family: SanFranciscoText-BoldItalic;
+  src: url(../fonts/SanFrancisco/SF-Pro-Text-BoldItalic.otf);
+}
+
+@font-face {
   font-family: SanFranciscoRounded-Regular;
   src: url(../fonts/SanFrancisco/SF-Pro-Rounded-Regular.otf);
 }
@@ -53,7 +58,6 @@
 #main-container {
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 0.5em;
 }
 
 .currencyNames {
@@ -210,18 +214,25 @@ h1 {
   font-family: "SanFranciscoText-Semibold", sans-serif;
   font-size: 1.9em;
   text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+label {
+  margin-bottom: 0.25rem;
+}
+
+#create-account-header {
   margin-bottom: 1.5rem;
 }
 
 .form-signin {
-  width:345px;
-  margin:0 auto;
+  margin: 0 5%;
 }
 
 .form-group {
   font-family: "SanFranciscoText-Regular", sans-serif;
   font-size: 16px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .form-control {
@@ -230,7 +241,7 @@ h1 {
   font-size: 14px;
   border-radius:8px;
   border-color: #0c14337d;
-  height:48px;
+  height:40px;
 }
 
 .form-control::placeholder {
@@ -255,5 +266,21 @@ h1 {
 #terms-of-use-link {
   font-family: "SanFranciscoText-Semibold", sans-serif;
   font-size: 11px;
+  color: black;
+}
+
+#login-screen-header {
+  margin-bottom: 0;
+}
+
+#sign-up-instead-label {
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#create-account-link {
+  font-family: "SanFranciscoText-BoldItalic", sans-serif;
   color: black;
 }

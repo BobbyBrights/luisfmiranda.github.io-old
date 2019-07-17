@@ -85,3 +85,7 @@ function goToServicesButtonClicked() {
         console.log('Unable to reach the mobile layer:', err);
     }
 }
+
+function updateNameOnDashboard(name) {
+  $('#name-on-dashboard').text(name);
+}
