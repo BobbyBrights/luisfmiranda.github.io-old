@@ -1,5 +1,7 @@
 let continueButtonIsActive = false;
 
+$('#android-test').text('CP1')
+
 function handleInput() {
     const nameCharsCount = $('#name')[0].value.length;
     const emailCharsCount = $('#email')[0].value.length;
@@ -9,6 +11,7 @@ function handleInput() {
     $('#email').css('font-size', emailCharsCount === 0 ? '14px' : '16px');
     $('#password').css('font-size', passwordCharsCount === 0 ? '14px' : '16px');
 
+    $('#android-test').text('CP2')
     Android.showToast('Hello world!');
     console.log('Atempt 1')
     
