@@ -10,25 +10,31 @@ function handleInput() {
     $('#name').css('font-size', nameCharsCount === 0 ? '14px' : '16px');
     $('#email').css('font-size', emailCharsCount === 0 ? '14px' : '16px');
     $('#password').css('font-size', passwordCharsCount === 0 ? '14px' : '16px');
-
-    $('#android-test').text('CP2')
-    Android.showToast('Hello world!');
-    console.log('Atempt 1')
     
     try {
         if (nameCharsCount !== 0 && passwordCharsCount !== 0 && emailCharsCount !== 0) {
             if (!continueButtonIsActive) {
-                window.webkit.messageHandlers.iOSToggleCreateAccountButton.postMessage(true);
-                continueButtonIsActive = true
+                toggleCreateAccountButton();
+                continueButtonIsActive = true;
             }
         } else {
             if (continueButtonIsActive) {
-                window.webkit.messageHandlers.iOSToggleCreateAccountButton.postMessage(false);
-                continueButtonIsActive = false
+                toggleCreateAccountButton();
+                continueButtonIsActive = false;
             }
         }
     } catch (err) {
         console.log('Unable to reach the mobile layer:', err);
+    }
+}
+
+function toggleCreateAccountButton() {
+    if (typeof window.webkit != undefined) { // iOS
+        window.webkit.messageHandlers.iOSToggleCreateAccountButton.postMessage('');
+    } else if (typeof Android != undefined) { // Android
+        Android.toggleCreateAccountButton();
+    } else {
+        console.log('Not in a web view.')
     }
 }
 
