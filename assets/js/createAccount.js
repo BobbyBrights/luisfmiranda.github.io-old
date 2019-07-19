@@ -28,10 +28,10 @@ function handleInput() {
 
 function toggleCreateAccountButton() {
     console.log('Trying to toggle the "Create account" button...')
-    if (typeof window.webkit != undefined) { // iOS
+    if (typeof window.webkit != 'undefined') { // iOS
         console.log('-- In a web view on iOS')
         window.webkit.messageHandlers.iOSToggleCreateAccountButton.postMessage('');
-    } else if (typeof Android != undefined) { // Android
+    } else if (typeof Android != 'undefined') { // Android
         console.log('-- In a web view on Android')
         Android.toggleCreateAccountButton();
     } else {
