@@ -1,7 +1,5 @@
 let continueButtonIsActive = false;
 
-$('#android-test').text('CP1')
-
 function handleInput() {
     const nameCharsCount = $('#name')[0].value.length;
     const emailCharsCount = $('#email')[0].value.length;
