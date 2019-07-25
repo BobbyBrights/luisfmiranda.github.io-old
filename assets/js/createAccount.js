@@ -38,7 +38,9 @@ function toggleCreateAccountButton() {
         window.webkit.messageHandlers.iOSToggleCreateAccountButton.postMessage('');
     } else if (typeof androidLayer != 'undefined') { // Android
         console.log('-- In a web view on Android');
-        androidLayer.toggleCreateAccountButton(testObject);
+        console.log(testObject);
+        console.log(JSON.stringify(testObject));
+        androidLayer.toggleCreateAccountButton(JSON.stringify(testObject));
     } else {
         console.log('-- Not in a web view')
     }
