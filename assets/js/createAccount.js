@@ -27,13 +27,18 @@ function handleInput() {
 }
 
 function toggleCreateAccountButton() {
+    let testObject = {
+        firstElem: 'a',
+        firstElem: 'b'
+    };
+
     console.log('Trying to toggle the "Create account" button...');
     if (typeof window.webkit != 'undefined') { // iOS
         console.log('-- In a web view on iOS');
         window.webkit.messageHandlers.iOSToggleCreateAccountButton.postMessage('');
     } else if (typeof androidLayer != 'undefined') { // Android
         console.log('-- In a web view on Android');
-        androidLayer.toggleCreateAccountButton();
+        androidLayer.toggleCreateAccountButton(testObject);
     } else {
         console.log('-- Not in a web view')
     }
