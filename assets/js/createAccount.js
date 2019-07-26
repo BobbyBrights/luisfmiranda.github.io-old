@@ -54,3 +54,13 @@ function retrieveUserInfo() {
         console.log('Unable to reach the mobile layer:', err);
     }
 }
+
+function saveSomethingImportant(message) {
+    console.log('Before:', somethingImportant, message);
+    somethingImportant = message;
+    console.log('After:', somethingImportant, message);
+}
+
+function loadSomethingImportant() {
+    console.log(somethingImportant);
+}
