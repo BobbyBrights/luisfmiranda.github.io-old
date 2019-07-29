@@ -8,6 +8,8 @@ function handleInput() {
     $('#name').css('font-size', nameCharsCount === 0 ? '14px' : '16px');
     $('#email').css('font-size', emailCharsCount === 0 ? '14px' : '16px');
     $('#password').css('font-size', passwordCharsCount === 0 ? '14px' : '16px');
+
+    alert('Alert shown');
     
     try {
         if (nameCharsCount !== 0 && passwordCharsCount !== 0 && emailCharsCount !== 0) {
